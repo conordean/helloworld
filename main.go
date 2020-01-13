@@ -7,7 +7,7 @@ import (
 
 func main() {
 	http.HandleFunc("/", HelloServer)
-	err := http.ListenAndServer(":80", nil)
+	err := http.ListenAndServe(":80", nil)
 	if err != nil {
 		panic(err)
 	}
